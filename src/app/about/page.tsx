@@ -1,5 +1,14 @@
+import Link from "next/link";
+
 export default function AboutPage() {
-  const navItems = ["Work", "Services", "Lab", "Insights", "Contact"];
+  const navItems = [
+    { label: "Work", href: "/work" },
+    { label: "Services", href: "/services" },
+    { label: "Lab", href: "/lab" },
+    { label: "Insights", href: "/insights" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "#" },
+  ];
 
   const stackItems = [
     ["</>", "React"],
@@ -59,13 +68,13 @@ export default function AboutPage() {
           <div className="text-2xl font-bold tracking-tight">STUDIO.FE</div>
           <div className="hidden items-center gap-12 md:flex">
             {navItems.map((item) => (
-              <a
-                key={item}
-                href="#"
+              <Link
+                key={item.label}
+                href={item.href}
                 className="text-xs font-semibold uppercase tracking-[0.1em] text-[#c7c4d7] transition-colors hover:text-[#e5e2e1]"
               >
-                {item}
-              </a>
+                {item.label}
+              </Link>
             ))}
           </div>
           <button className="rounded-lg bg-[#c0c1ff] px-6 py-2 text-xs font-semibold uppercase tracking-[0.1em] text-[#1000a9] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(164,214,76,0.3)] active:scale-95">

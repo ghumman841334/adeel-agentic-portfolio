@@ -1,18 +1,29 @@
+import Link from "next/link";
+
 export default function Home() {
+  const navItems = [
+    { label: "Work", href: "/work" },
+    { label: "Services", href: "/services" },
+    { label: "Lab", href: "/lab" },
+    { label: "Insights", href: "/insights" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "#" },
+  ];
+
   return (
     <div className="min-h-screen bg-[#050505] text-[#e5e2e1]">
       <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#131313]/70 backdrop-blur-xl">
         <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-8">
           <div className="text-2xl font-bold tracking-tight">STUDIO.FE</div>
           <div className="hidden items-center gap-10 md:flex">
-            {["Work", "Services", "Lab", "Insights", "Contact"].map((item) => (
-              <a
-                key={item}
-                href="#"
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
                 className="text-xs font-semibold uppercase tracking-[0.1em] text-[#c7c4d7] transition-colors hover:text-[#e5e2e1]"
               >
-                {item}
-              </a>
+                {item.label}
+              </Link>
             ))}
           </div>
           <button className="rounded-full bg-[#c0c1ff] px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.1em] text-[#1000a9] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(164,214,76,0.4)]">
