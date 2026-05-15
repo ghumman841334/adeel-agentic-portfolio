@@ -11,27 +11,27 @@ export default function ServicesPage() {
   ];
 
   const heroCards = [
-    { icon: "◧", title: "UI/UX Design", color: "text-[#c0c1ff]" },
-    { icon: "</>", title: "Frontend", color: "text-[#a4d64c]" },
-    { icon: "⚡", title: "Optimization", color: "text-[#c0c1ff]" },
-    { icon: "↗", title: "CRO", color: "text-[#a4d64c]" },
+    { icon: "◧", title: "SaaS Dashboards", color: "text-[#c0c1ff]" },
+    { icon: "</>", title: "Full-Stack Apps", color: "text-[#a4d64c]" },
+    { icon: "⚡", title: "AI Automation", color: "text-[#c0c1ff]" },
+    { icon: "↗", title: "Cloud Delivery", color: "text-[#a4d64c]" },
   ];
 
   const processSteps = [
     {
       step: "01.",
-      title: "Technical Discovery",
-      text: "We dive deep into your codebase and business goals to map the most efficient path forward.",
+      title: "Workflow Discovery",
+      text: "I clarify users, business rules, integrations, data flows, and launch priorities before writing production code.",
     },
     {
       step: "02.",
-      title: "Rapid Prototyping",
-      text: "Low-fidelity logic meets high-fidelity design. We iterate fast to validate user flows before build.",
+      title: "Architecture Blueprint",
+      text: "I map the frontend, backend APIs, database, auth, automation steps, and deployment path around the real scope.",
     },
     {
       step: "03.",
-      title: "Precision Build",
-      text: "Our engineers translate pixels into performance-first code with 100% test coverage.",
+      title: "Production Build",
+      text: "I implement clean, maintainable features with React, Angular, Next.js, Node.js, Docker, and cloud services.",
     },
   ];
 
@@ -39,7 +39,7 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-[#131313] text-[#e5e2e1] selection:bg-[#c0c1ff]/30">
       <nav className="fixed top-0 z-50 w-full border-b border-[#464554]/20 bg-[#131313]/60 backdrop-blur-xl">
         <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-8">
-          <div className="text-2xl font-bold tracking-tight">STUDIO.FE</div>
+          <div className="text-2xl font-bold tracking-tight">Adeel Javed</div>
           <div className="hidden items-center gap-8 md:flex">
             {navItems.map((item) => (
               <Link
@@ -56,7 +56,7 @@ export default function ServicesPage() {
             ))}
           </div>
           <button className="rounded-full bg-[#c0c1ff] px-6 py-2 text-xs font-semibold uppercase tracking-[0.1em] text-[#1000a9] transition-all duration-200 hover:bg-[#c0c1ff]/90 active:scale-95">
-            Start Project
+            Start a Project
           </button>
         </div>
       </nav>
@@ -66,20 +66,20 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 items-end gap-6 md:grid-cols-12">
             <div className="md:col-span-8">
               <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.2em] text-[#c0c1ff]">
-                Excellence by Default
+                Services for Product Teams
               </span>
               <h1 className="mb-6 text-5xl font-bold leading-[1.1] tracking-tight md:text-7xl">
-                Precision Engineering for{" "}
+                Full-stack delivery for{" "}
                 <span className="bg-gradient-to-r from-[#c0c1ff] to-[#a4d64c] bg-clip-text text-transparent">
-                  Digital Leaders.
+                  SaaS, dashboards, and automation.
                 </span>
               </h1>
             </div>
             <div className="pb-4 md:col-span-4">
               <p className="text-lg text-[#c7c4d7]">
-                We bridge the gap between complex technical challenges and
-                high-performance user experiences. Specialized in scaling the
-                next generation of web applications.
+                I help founders, agencies, and product teams build scalable
+                dashboards, portals, backend APIs, cloud deployments, real-time
+                features, and AI automation workflows.
               </p>
             </div>
           </div>
@@ -102,18 +102,18 @@ export default function ServicesPage() {
             <article className="relative min-h-[400px] overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl md:col-span-7">
               <div className="relative z-10">
                 <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.1em] text-[#c0c1ff]">
-                  01 / Creative Direction
+                  01 / Product Interfaces
                 </span>
                 <h2 className="mb-6 text-5xl font-semibold tracking-tight">
-                  User Interface &amp; Experience
+                  SaaS Dashboards &amp; Portals
                 </h2>
                 <p className="mb-8 max-w-md text-[#c7c4d7]">
-                  Crafting interfaces that are as functional as they are
-                  beautiful. We focus on interaction design that minimizes
-                  friction and maximizes delight.
+                  Responsive, workflow-friendly React, Angular, and Next.js
+                  interfaces for admin dashboards, portals, reporting screens,
+                  and internal business tools.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["DESIGN SYSTEMS", "PROTOTYPING", "USER RESEARCH"].map(
+                  {["DASHBOARDS", "PORTALS", "RESPONSIVE UI"].map(
                     (item) => (
                       <span
                         key={item}
@@ -131,14 +131,14 @@ export default function ServicesPage() {
             <article className="flex flex-col justify-between rounded-xl border border-[#a4d64c]/20 bg-white/[0.03] p-8 backdrop-blur-xl md:col-span-5">
               <div>
                 <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.1em] text-[#a4d64c]">
-                  02 / Architecture
+                  02 / Full-Stack Architecture
                 </span>
-                <h2 className="mb-4 text-3xl font-semibold">Frontend Engineering</h2>
+                <h2 className="mb-4 text-3xl font-semibold">Application Engineering</h2>
                 <ul className="space-y-3 text-[#c7c4d7]">
                   {[
-                    "Next.js & React Mastery",
-                    "Typescript Rigor",
-                    "Atomic Component Logic",
+                    "React, Angular, Next.js, and TypeScript",
+                    "Node.js, Express.js, NestJS, REST, and GraphQL",
+                    "JWT, OAuth, RBAC, PostgreSQL, MongoDB, and MySQL",
                   ].map((line) => (
                     <li key={line} className="flex items-center gap-2">
                       <span className="text-[#a4d64c]">●</span>
@@ -158,17 +158,17 @@ export default function ServicesPage() {
 
             <article className="rounded-xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl md:col-span-4">
               <span className="mb-4 block text-2xl text-[#c0c1ff]">⚡</span>
-              <h3 className="mb-4 text-2xl font-medium">Performance Audit</h3>
+              <h3 className="mb-4 text-2xl font-medium">Cloud &amp; DevOps</h3>
               <p className="mb-6 text-[#c7c4d7]">
-                Eliminate performance bottlenecks. We target sub-second TTI and
-                perfect Core Web Vitals scores.
+                AWS, Azure, Docker, Docker Compose, GitHub Actions, and GitLab
+                CI for releases that are easier to run and maintain.
               </p>
               <div className="h-1 w-full overflow-hidden rounded-full bg-[#201f1f]">
                 <div className="h-full w-[98%] bg-[#a4d64c]" />
               </div>
               <div className="mt-2 flex justify-between text-[10px] font-semibold tracking-[0.1em] text-[#a4d64c]">
-                <span>LCP OPTIMIZED</span>
-                <span>98/100</span>
+                <span>DEPLOYMENT READY</span>
+                <span>AWS / AZURE</span>
               </div>
             </article>
 
@@ -176,15 +176,15 @@ export default function ServicesPage() {
               <div className="flex h-full flex-col items-center gap-8 md:flex-row">
                 <div className="flex-1">
                   <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.1em] text-[#c0c1ff]">
-                    03 / Conversion
+                    03 / Automation
                   </span>
                   <h2 className="mb-4 text-3xl font-semibold">
-                    Growth &amp; Optimization
+                    AI Workflows &amp; Calling Agents
                   </h2>
                   <p className="text-[#c7c4d7]">
-                    Data-driven refinements to your user journey. We implement
-                    A/B testing and heat-mapping to turn traffic into measurable
-                    revenue growth.
+                    n8n, Make, and AI agent workflows for lead qualification,
+                    appointment booking, CRM updates, support triage, follow-ups,
+                    reporting, and human handoff.
                   </p>
                 </div>
                 <div className="grid w-full grid-cols-2 gap-4 md:w-1/3">
@@ -212,7 +212,7 @@ export default function ServicesPage() {
                 Workflow
               </span>
               <h2 className="mt-4 text-5xl font-semibold tracking-tight">
-                The STUDIO.FE Standard
+                How I Build
               </h2>
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -242,10 +242,10 @@ export default function ServicesPage() {
           </h2>
           <div className="space-y-4">
             {[
-              "What is your typical project timeline?",
-              "Do you offer ongoing maintenance?",
-              "Can you work with our existing design team?",
-              "What technologies do you specialize in?",
+              "Can you build both frontend and backend?",
+              "Can you automate our CRM or lead workflow?",
+              "Can you work with an existing product team?",
+              "Which technologies do you specialize in?",
             ].map((question, idx) => (
               <article
                 key={question}
@@ -273,9 +273,9 @@ export default function ServicesPage() {
                 </div>
                 {idx === 1 && (
                   <p className="text-[#c7c4d7]">
-                    Yes, we provide Retainer Engineering services for enterprise
-                    partners who require constant iterative improvements,
-                    security patches, and performance monitoring.
+                    Yes. I can build AI automation workflows with n8n, Make, AI
+                    agents, CRM integrations, follow-up logic, reporting, and
+                    clear human approval points where needed.
                   </p>
                 )}
               </article>
@@ -287,20 +287,19 @@ export default function ServicesPage() {
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-t from-[#c0c1ff]/5 to-transparent p-16 text-center backdrop-blur-xl">
             <div className="relative z-10">
               <h2 className="mb-6 text-5xl font-bold leading-tight tracking-tight md:text-7xl">
-                Ready to upgrade your <br />
-                <span className="text-[#a4d64c]">digital infrastructure?</span>
+                Ready to build your <br />
+                <span className="text-[#a4d64c]">next product or workflow?</span>
               </h2>
               <p className="mx-auto mb-10 max-w-2xl text-lg text-[#c7c4d7]">
-                Join the ranks of high-growth teams who trust STUDIO.FE for
-                their most critical frontend challenges. Discovery calls are 30
-                minutes and purely technical.
+                Share your product goal, current stack, or manual process. I can
+                review the scope and suggest the cleanest implementation path.
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <button className="rounded-full bg-[#a4d64c] px-8 py-4 text-xs font-semibold uppercase tracking-[0.1em] text-[#233600] shadow-[0_0_20px_rgba(164,214,76,0.15)] transition-all hover:-translate-y-0.5">
                   Book Discovery Call
                 </button>
                 <button className="rounded-full border border-[#464554] px-8 py-4 text-xs font-semibold uppercase tracking-[0.1em] transition-colors hover:bg-[#3a3939]">
-                  View Case Studies
+                  View Work
                 </button>
               </div>
             </div>
@@ -312,10 +311,10 @@ export default function ServicesPage() {
       <footer className="w-full rounded-t-xl border-t border-[#464554]/20 bg-[#0e0e0e]">
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-6 px-8 py-20 md:grid-cols-12">
           <div className="md:col-span-4">
-            <div className="mb-4 text-3xl font-semibold">STUDIO.FE</div>
+            <div className="mb-4 text-3xl font-semibold">Adeel Javed</div>
             <p className="max-w-xs text-[#c7c4d7]">
-              The frontend partner for teams that refuse to compromise on
-              quality and speed.
+              Senior full-stack engineer for SaaS dashboards, portals, cloud
+              systems, real-time features, and AI automation.
             </p>
           </div>
           <div className="md:col-span-2">
@@ -323,7 +322,7 @@ export default function ServicesPage() {
               Services
             </h5>
             <ul className="space-y-3 text-[#c7c4d7]">
-              {["Design", "Engineering", "Strategy"].map((item) => (
+              {["SaaS Apps", "APIs", "Automation"].map((item) => (
                 <li key={item}>
                   <a
                     href="#"
@@ -337,10 +336,10 @@ export default function ServicesPage() {
           </div>
           <div className="md:col-span-2">
             <h5 className="mb-6 text-xs font-semibold uppercase tracking-[0.1em] text-[#a4d64c]">
-              Studio
+              Portfolio
             </h5>
             <ul className="space-y-3 text-[#c7c4d7]">
-              {["Case Studies", "Stack", "Availability"].map((item) => (
+              {["Work", "Stack", "Availability"].map((item) => (
                 <li key={item}>
                   <a
                     href="#"
@@ -354,12 +353,12 @@ export default function ServicesPage() {
           </div>
           <div className="md:col-span-4">
             <h5 className="mb-6 text-xs font-semibold uppercase tracking-[0.1em] text-[#a4d64c]">
-              Newsletter
+              Contact
             </h5>
             <div className="flex border-b border-[#464554] pb-2">
               <input
                 type="email"
-                placeholder="Email Address"
+                placeholder="adeeljaved839@gmail.com"
                 className="w-full border-none bg-transparent text-[#e5e2e1] outline-none placeholder:text-[#c7c4d7]"
               />
               <button className="text-[#c0c1ff]">→</button>
@@ -367,7 +366,7 @@ export default function ServicesPage() {
           </div>
           <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#464554]/20 pt-8 md:col-span-12 md:flex-row">
             <p className="text-[#c7c4d7]">
-              © 2024 STUDIO.FE — Engineered with Precision.
+              © 2026 Adeel Javed — Production-ready software delivery.
             </p>
             <div className="flex gap-6 text-[#c7c4d7]">
               <a href="#" className="transition-colors hover:text-[#c0c1ff]">

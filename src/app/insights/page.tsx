@@ -14,7 +14,7 @@ export default function InsightsPage() {
     <div className="min-h-screen bg-[#131313] text-[#e5e2e1] selection:bg-[#c0c1ff] selection:text-[#0d0096]">
       <nav className="fixed top-0 z-50 w-full border-b border-[#464554]/20 bg-[#131313]/60 backdrop-blur-xl">
         <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-8">
-          <span className="text-2xl font-bold tracking-tight">STUDIO.FE</span>
+          <span className="text-2xl font-bold tracking-tight">Adeel Javed</span>
           <div className="hidden items-center gap-6 md:flex">
             {navItems.map((item) => (
               <Link
@@ -31,7 +31,7 @@ export default function InsightsPage() {
             ))}
           </div>
           <button className="rounded-full bg-[#c0c1ff] px-6 py-2 text-xs font-semibold uppercase tracking-[0.1em] text-[#0d0096] transition-transform hover:-translate-y-0.5 active:scale-95">
-            Start Project
+            Start a Project
           </button>
         </div>
       </nav>
@@ -41,15 +41,15 @@ export default function InsightsPage() {
           <div className="flex flex-col items-end justify-between gap-6 md:flex-row">
             <div className="max-w-2xl">
               <span className="mb-1 block text-xs font-semibold uppercase tracking-[0.1em] text-[#a4d64c]">
-                Knowledge Archive
+                Engineering Notes
               </span>
               <h1 className="mb-3 text-5xl font-bold tracking-tight md:text-7xl">
-                Insights
+                Practical Insights
               </h1>
               <p className="text-lg text-[#c7c4d7]">
-                Thought leadership on the intersection of design and
-                engineering. Exploring the future of high-performance digital
-                experiences.
+                Notes on full-stack product delivery, SaaS dashboards, clean
+                backend architecture, cloud deployment, AI automation, and
+                remote engineering workflows.
               </p>
             </div>
             <div className="w-full md:w-80">
@@ -57,7 +57,7 @@ export default function InsightsPage() {
                 <span className="absolute left-4 text-[#c7c4d7]">⌕</span>
                 <input
                   className="w-full border-0 border-b-2 border-[#464554]/30 bg-[#1c1b1b] px-12 py-4 text-sm outline-none transition-colors focus:border-[#c0c1ff]"
-                  placeholder="Search archive..."
+                  placeholder="Search notes..."
                   type="text"
                 />
               </div>
@@ -67,7 +67,7 @@ export default function InsightsPage() {
 
         <section className="mx-auto mb-12 max-w-[1280px] px-8">
           <div className="flex gap-3 overflow-x-auto pb-2">
-            {["All Posts", "Strategy", "Engineering", "Performance", "Design"].map(
+            {["All Posts", "SaaS", "Engineering", "Cloud", "AI Automation"].map(
               (item, idx) => (
                 <button
                   key={item}
@@ -101,12 +101,13 @@ export default function InsightsPage() {
                 <span className="text-xs text-[#c7c4d7]">12 Min Read</span>
               </div>
               <h2 className="mb-4 text-4xl font-semibold tracking-tight">
-                The Architectural Shift: Why Next-Gen Performance Demands
-                Obsidian Foundations
+                Strong Foundations Before AI Hype: Building Automation That
+                Teams Can Trust
               </h2>
               <p className="mb-6 text-[#c7c4d7]">
-                How we engineered a sub-100ms LCP for global enterprise
-                platforms by rethinking the traditional React hydration model.
+                AI workflows work best when the business process is clear first:
+                intake, decision logic, CRM updates, follow-up, reporting, and
+                human handoff all need dependable engineering around them.
               </p>
             </div>
           </div>

@@ -14,7 +14,7 @@ export default function LabPage() {
     <div className="min-h-screen bg-[#131313] font-sans text-[#e5e2e1] selection:bg-[#c0c1ff] selection:text-[#0d0096]">
       <nav className="fixed top-0 z-50 w-full border-b border-[#464554]/20 bg-[#131313]/60 backdrop-blur-xl">
         <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-8">
-          <div className="text-2xl font-bold tracking-tight">STUDIO.FE</div>
+          <div className="text-2xl font-bold tracking-tight">Adeel Javed</div>
           <div className="hidden items-center gap-6 md:flex">
             {navItems.map((item) => (
               <Link
@@ -31,7 +31,7 @@ export default function LabPage() {
             ))}
           </div>
           <button className="rounded-full bg-[#c0c1ff] px-6 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-[#0d0096] transition-all hover:bg-[#c0c1ff]/90 active:scale-95">
-            Start Project
+            Start New Project
           </button>
         </div>
       </nav>
@@ -42,16 +42,16 @@ export default function LabPage() {
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#a4d64c]/30 bg-[#a4d64c]/10 px-3 py-1 text-[#a4d64c]">
               <span className="text-sm">⚗</span>
               <span className="text-xs font-semibold uppercase tracking-[0.15em]">
-                Research &amp; Development
+                Experiments &amp; Automation
               </span>
             </div>
             <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-7xl">
-              The <span className="text-[#c0c1ff]">Lab</span>
+              The <span className="text-[#c0c1ff]">Build Lab</span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-[#c7c4d7]">
-              Where we push the boundaries of frontend engineering through
-              technical experiments, open-source R&amp;D, and performance stress
-              tests.
+              A working space for AI automations, agentic workflows, cloud
+              prototypes, real-time features, and product ideas that can become
+              reliable client solutions.
             </p>
           </div>
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#c0c1ff]/5 blur-[120px]" />
@@ -64,18 +64,18 @@ export default function LabPage() {
                 <div className="mb-10 flex items-start justify-between">
                   <div>
                     <h3 className="mb-2 text-3xl font-semibold">
-                      Custom Physics Engine
+                      AI Lead Qualification Workflow
                     </h3>
                     <p className="max-w-md text-[#c7c4d7]">
-                      A deterministic 2D physics engine optimized for React
-                      reconciler performance. Featuring sub-stepping and spatial
-                      partitioning.
+                      An n8n or Make workflow that captures leads, qualifies
+                      them with AI, triggers follow-up, updates the CRM, and
+                      keeps a human approval point for sensitive actions.
                     </p>
                   </div>
                   <span className="text-5xl text-[#a4d64c]">▦</span>
                 </div>
                 <div className="mb-6 flex flex-wrap gap-2">
-                  {["TYPESCRIPT", "REACT", "SIMULATION"].map((tag) => (
+                  {["N8N", "MAKE", "AI AGENTS"].map((tag) => (
                     <span
                       key={tag}
                       className="rounded border border-[#464554]/30 bg-[#353534] px-3 py-1 text-[10px] font-semibold tracking-[0.1em]"
@@ -85,14 +85,15 @@ export default function LabPage() {
                   ))}
                 </div>
                 <div className="h-48 overflow-hidden rounded-lg border border-[#464554]/20 bg-[#0e0e0e] p-6 font-mono text-sm text-[#a4d64c]/80">
-                  <pre>{`const engine = new QuantumPhysics({
-  gravity: { x: 0, y: 9.81 },
-  solver: 'verlet',
-  precision: 'high-performance'
+                  <pre>{`const workflow = new ClientAutomation({
+  intake: 'website-form',
+  qualify: 'ai-agent',
+  handoff: 'human-review'
 });
 
-engine.on('collision', (event) => {
-  calculateImpulse(event.bodies);
+workflow.on('qualified-lead', (lead) => {
+  updateCRM(lead);
+  scheduleFollowUp(lead);
 });`}</pre>
                 </div>
               </article>
@@ -101,15 +102,15 @@ engine.on('collision', (event) => {
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg border border-[#a4d64c]/20 bg-[#a4d64c]/10">
                   <span className="text-[#a4d64c]">▣</span>
                 </div>
-                <h3 className="mb-2 text-2xl font-medium">Performance Benchmarks</h3>
+                <h3 className="mb-2 text-2xl font-medium">Automation Opportunities</h3>
                 <p className="text-[#c7c4d7]">
-                  Comparative analysis of Hydration vs. Streaming across various
-                  V8 environments.
+                  Practical workflows where AI can reduce manual work without
+                  removing human control from important decisions.
                 </p>
                 <div className="mt-8 space-y-4">
                   {[
-                    ["VIRTUAL DOM", "42ms", "40%"],
-                    ["OBSIDIAN CORE", "12ms", "12%"],
+                    ["LEAD QUALIFICATION", "AI", "70%"],
+                    ["CRM FOLLOW-UP", "N8N", "55%"],
                   ].map(([label, value, width]) => (
                     <div key={label}>
                       <div className="mb-2 flex justify-between text-xs font-semibold uppercase tracking-[0.1em]">

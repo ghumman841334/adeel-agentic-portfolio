@@ -14,7 +14,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#050505] text-[#e5e2e1]">
       <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#131313]/70 backdrop-blur-xl">
         <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-8">
-          <div className="text-2xl font-bold tracking-tight">STUDIO.FE</div>
+          <div className="text-2xl font-bold tracking-tight">Adeel Javed</div>
           <div className="hidden items-center gap-10 md:flex">
             {navItems.map((item) => (
               <Link
@@ -27,7 +27,7 @@ export default function Home() {
             ))}
           </div>
           <button className="rounded-full bg-[#c0c1ff] px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.1em] text-[#1000a9] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(164,214,76,0.4)]">
-            Start Project
+            Start a Project
           </button>
         </div>
       </nav>
@@ -39,21 +39,22 @@ export default function Home() {
           <div className="grid grid-cols-12 items-center gap-6">
             <div className="col-span-12 lg:col-span-8">
               <h1 className="mb-6 text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
-                High-performance <br />
-                <span className="text-[#c0c1ff]">web experiences</span> <br />
-                that scale.
+                Full-stack SaaS, <br />
+                <span className="text-[#c0c1ff]">dashboards, and AI</span> <br />
+                workflows that ship.
               </h1>
               <p className="mb-12 max-w-2xl text-lg leading-relaxed text-[#c7c4d7]">
-                We are a precision-engineered frontend agency specializing in
-                high-load SaaS, complex dashboards, and ultra-fluid interfaces
-                for category-leading brands.
+                I help teams build production-ready web apps, admin dashboards,
+                cloud-backed APIs, real-time communication features, and AI
+                automation workflows using React, Angular, Next.js, Node.js,
+                AWS, Azure, and modern delivery practices.
               </p>
               <div className="flex flex-wrap items-center gap-6">
                 <button className="rounded-full bg-[#c0c1ff] px-8 py-4 text-xs font-semibold uppercase tracking-[0.1em] text-[#1000a9] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_25px_rgba(164,214,76,0.3)]">
-                  Start Project →
+                  Start a Project →
                 </button>
                 <button className="rounded-full border border-[#a4d64c] px-8 py-4 text-xs font-semibold uppercase tracking-[0.1em] text-[#a4d64c] transition-colors hover:bg-[#a4d64c]/5">
-                  View Our Stack
+                  View My Stack
                 </button>
               </div>
             </div>
@@ -61,10 +62,10 @@ export default function Home() {
             <div className="col-span-12 mt-8 lg:col-span-4 lg:mt-0">
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  ["10y+", "EXP. SENIORITY"],
-                  ["50+", "PRODUCT SHIPS"],
-                  ["99", "LIGHTHOUSE AVG."],
-                  ["2.4s", "AVG. TTI LOAD"],
+                  ["6y+", "WEB DELIVERY"],
+                  ["MERN", "MEAN + NEXT.JS"],
+                  ["AWS", "AZURE + DOCKER"],
+                  ["AI", "N8N + AGENTS"],
                 ].map(([value, label]) => (
                   <div
                     key={label}
@@ -84,7 +85,7 @@ export default function Home() {
         </section>
 
         <section className="mx-auto flex w-full max-w-[1280px] flex-wrap items-center justify-between gap-10 border-y border-white/10 px-8 py-6 opacity-50 grayscale transition-all duration-500 hover:grayscale-0">
-          {["ALPHA.SYS", "NEXUS.LAB", "QUANTUM", "VERTI.GO", "VELOCITI"].map(
+          {["RAMPART", "Migration Portal", "Elder Care", "MartGo", "POLDIT"].map(
             (company) => (
               <span key={company} className="text-2xl font-bold tracking-tight">
                 {company}
@@ -96,10 +97,10 @@ export default function Home() {
         <section className="mx-auto w-full max-w-[1280px] px-8 py-20">
           <div className="mb-12">
             <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.1em] text-[#a4d64c]">
-              OUR CAPABILITIES
+              CORE OFFERS
             </span>
             <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-              Architecting the future of the web.
+              Practical engineering for products that need to work.
             </h2>
           </div>
 
@@ -108,16 +109,16 @@ export default function Home() {
               <div>
                 <div className="mb-6 text-5xl text-[#c0c1ff]">✦</div>
                 <h3 className="mb-4 text-3xl font-semibold">
-                  Strategic UI/UX Design
+                  SaaS Dashboards & Portals
                 </h3>
                 <p className="max-w-md text-lg text-[#c7c4d7]">
-                  We bridge the gap between aesthetic brilliance and technical
-                  feasibility. Design systems that do not just look good, but
-                  perform at scale.
+                  I build internal tools, admin dashboards, onboarding portals,
+                  and workflow-heavy SaaS products with clear interfaces,
+                  maintainable architecture, and reliable data flows.
                 </p>
               </div>
               <div className="mt-6 flex flex-wrap gap-2">
-                {["DESIGN SYSTEMS", "ACCESSIBILITY", "FIGMA-TO-CODE"].map(
+                {["REACT", "ANGULAR", "NEXT.JS"].map(
                   (pill) => (
                     <span
                       key={pill}
@@ -133,21 +134,21 @@ export default function Home() {
             <div className="col-span-12 flex min-h-[400px] flex-col rounded-xl border border-white/10 bg-white/[0.03] p-10 backdrop-blur-xl md:col-span-5">
               <div className="mb-6 text-5xl text-[#c0c1ff]">⌘</div>
               <h3 className="mb-4 text-3xl font-semibold">
-                Core Frontend Engineering
+                Full-Stack Product Engineering
               </h3>
               <p className="text-[#c7c4d7]">
-                Production-grade React, Next.js, and TypeScript implementation.
-                We write clean, testable, and maintainable code bases that your
-                internal teams will love.
+                From responsive UI to REST and GraphQL APIs, auth, database
+                design, Docker, CI/CD, and AWS or Azure deployment. I can take a
+                feature from idea to production.
               </p>
               <div className="mt-auto pt-6">
                 <div className="h-0.5 w-full overflow-hidden rounded-full bg-white/10">
                   <div className="h-full w-[85%] bg-[#a4d64c]" />
                 </div>
                 <div className="mt-2 flex justify-between text-[10px] font-semibold tracking-[0.1em] text-[#c7c4d7]">
-                  <span>RELIABILITY SCORE</span>
+                  <span>DELIVERY FOCUS</span>
                   <span className="text-[#a4d64c]">
-                    85.4% HIGHER THAN INDUSTRY AVG
+                    CLEAN, MAINTAINABLE, PRODUCTION-READY
                   </span>
                 </div>
               </div>
@@ -155,10 +156,11 @@ export default function Home() {
 
             <div className="col-span-12 rounded-xl border border-white/10 bg-white/[0.03] p-10 backdrop-blur-xl md:col-span-4">
               <div className="mb-6 text-5xl text-[#c0c1ff]">⚡</div>
-              <h3 className="mb-3 text-2xl font-medium">Speed Optimization</h3>
+              <h3 className="mb-3 text-2xl font-medium">AI Automation</h3>
               <p className="text-[#c7c4d7]">
-                Fine-tuning Core Web Vitals, tree-shaking, and asset delivery
-                for instantaneous user experiences.
+                n8n, Make, and AI agent workflows for lead qualification,
+                appointment booking, CRM updates, follow-ups, support triage,
+                and reporting.
               </p>
             </div>
 
@@ -166,11 +168,12 @@ export default function Home() {
               <div className="relative z-10">
                 <div className="mb-6 text-5xl text-[#c0c1ff]">◉</div>
                 <h3 className="mb-3 text-3xl font-semibold">
-                  Scaling &amp; Infrastructure
+                  Real-Time &amp; Cloud Systems
                 </h3>
                 <p className="max-w-lg text-lg text-[#c7c4d7]">
-                  Cloud-native frontend deployments and micro-frontend
-                  architectures for enterprise ecosystems.
+                  Socket.io, WebRTC, Peer.js, AWS, Azure, Docker, PostgreSQL,
+                  MongoDB, MySQL, and Redis for applications that need dependable
+                  communication and scale.
                 </p>
               </div>
               <div className="absolute -bottom-10 -right-10 h-64 w-64 rounded-full bg-[#c0c1ff]/10 blur-3xl transition-all duration-500 hover:bg-[#c0c1ff]/20" />
@@ -183,10 +186,10 @@ export default function Home() {
             <div className="mb-12 flex items-end justify-between">
               <div>
                 <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.1em] text-[#a4d64c]">
-                  CASE STUDIES
+                  PROJECT PROOF
                 </span>
                 <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-                  Engineering Impact.
+                  Shipped work in the real world.
                 </h2>
               </div>
               <button className="hidden border-b border-[#c0c1ff]/30 pb-1 text-xs font-semibold uppercase tracking-[0.1em] text-[#c0c1ff] transition-colors hover:border-[#c0c1ff] md:block">
@@ -197,18 +200,18 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
               {[
                 {
-                  title: "Nexus Analytics Platform",
-                  text: "Re-engineering a complex data visualization tool for 1M+ active monthly users.",
-                  stat: "+140%",
-                  label: "CONVERSION LIFT",
+                  title: "RAMPART Fraud Detection Platform",
+                  text: "Led frontend development for an Ohio government fraud detection platform with complex workflows and dashboard requirements.",
+                  stat: "Gov",
+                  label: "FRAUD DETECTION",
                   image:
                     "https://lh3.googleusercontent.com/aida-public/AB6AXuBosRci_bAj6SwNn97Ah2ZxHqkRC4S-pm7Eb7gDWn5CNFn-Cfuh9REtCf2e6IqyMPaOAIQqPk9O5yvACyiPjg6Kkj4_2JkQc0taJlNnVfQRVbXBG6TX_2cq7ri4_muR1fRg2a4XH3r13MgQ6RkFbsn94By7WMeM3f1U-h8PIdqNVEBD5QyLk-bqQBBmO_0KjCYljX0kG6phqviTt6TF0Izm2QUceeBMO4M9a5NdDvd0fDK9F3ByNrm6qbb_j8UmsiUdq3e_A_QMCoSz",
                 },
                 {
-                  title: "Velociti Commerce",
-                  text: "A custom Headless Shopify build focusing on sub-second page transitions.",
-                  stat: "0.8s",
-                  label: "AVG. LCP TIME",
+                  title: "Elder Care Communication Platform",
+                  text: "Implemented real-time audio and video functionality using Socket.io, WebRTC, and Peer.js for an elder care use case.",
+                  stat: "RTC",
+                  label: "AUDIO / VIDEO",
                   image:
                     "https://lh3.googleusercontent.com/aida-public/AB6AXuCwrg5TERTYkeACRX3wFRvhNadVDhI8KgSXCRYj4qpcwn4-Bz74_bupLaQ11Gaat3KJ5bRXpeq6J3O8gqtFQWcQLTlUP8xDHU9nkaRMdcdD1LC22bDzDyWMGJEU5KquwcraVYYbYcJJfSkayxuWXiD-flUD2T0rFbTlDu0ujS71cMZUFFngIOFvAhtkx5XP-zdV_6qSz1hlSJSNBzteDWCGyTHxbJE9WNoVNaGvHn1X3Vpir1FzhW5mk574boa0rc_Oc_gdV-z06MeM",
                 },
@@ -246,19 +249,19 @@ export default function Home() {
         <section className="mx-auto w-full max-w-[1280px] px-8 py-20">
           <div className="mb-20 text-center">
             <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-              The 5-Step Logic.
+              The Delivery Path.
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-[#c7c4d7]">
-              Our methodology is iterative, data-driven, and built for speed.
+              A practical process for turning scope into production software.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-5">
             {[
-              ["01", "Discover", "Auditing current tech debt and defining KPIs."],
-              ["02", "Blueprint", "Component architecture and logic mapping."],
-              ["03", "Engineer", "Ultra-clean React/Next implementation."],
-              ["04", "Deploy", "CI/CD automation and edge integration."],
-              ["05", "Optimize", "Post-launch tuning and performance monitoring."],
+              ["01", "Discover", "Clarify goals, users, workflows, and technical constraints."],
+              ["02", "Blueprint", "Map UI, APIs, data models, automation steps, and deployment needs."],
+              ["03", "Engineer", "Build with React, Angular, Next.js, Node.js, and clean integration patterns."],
+              ["04", "Deploy", "Containerize, connect cloud services, and prepare reliable releases."],
+              ["05", "Improve", "Refine performance, security, usability, and maintainability after launch."],
             ].map(([step, title, text]) => (
               <div key={step} className="text-center">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-2xl font-semibold text-[#c0c1ff] ring-4 ring-[#050505]">
@@ -276,28 +279,28 @@ export default function Home() {
             <div className="grid grid-cols-12 gap-6">
               <div className="col-span-12 lg:col-span-4">
                 <h2 className="mb-4 text-4xl font-semibold tracking-tight">
-                  Built for builders.
+                  Built for serious product teams.
                 </h2>
                 <p className="text-lg text-[#c7c4d7]">
-                  What the technical leaders of our partners have to say about
-                  working with us.
+                  Proof points from production work, client-facing delivery, and
+                  full-stack ownership.
                 </p>
               </div>
               <div className="col-span-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:col-span-8">
                 {[
                   {
-                    name: "MARCUS CHEN",
-                    role: "CTO, NEXUS.LAB",
+                    name: "RAMPART",
+                    role: "OHIO GOVERNMENT FRAUD PLATFORM",
                     quote:
-                      '"STUDIO.FE is quite literally the only agency we trust with our core product. Their attention to technical detail is unmatched in the industry."',
+                      '"Led frontend delivery for a fraud detection platform where workflow clarity, reliability, and delivery discipline mattered."',
                     image:
                       "https://lh3.googleusercontent.com/aida-public/AB6AXuA87sT5yDAcnRiIRWOTcCAgXKkNfdTPD0G0fw0sxeWo4_LptYbH91AJPnp_1LGNZszuUqlvF0cSeO0z5SdoxcGwPvRFingMEDSIQPoe2MVQGmlODuXoxwk57yquh6S-wB8_lHeIDSHOlR23rjNwnTZKBXi5214ZRFQqm4pr-udF_FHOJWJ9PUYuQZ1OW_ur0nHNO5dX33MrnIjS6Z2DNSNt_PIYINbMpTYbJowkjtwI6k65CI__BoQlu2-8asvWI_kGF_EvfPXYUdl6",
                   },
                   {
-                    name: "SARAH JENKINS",
-                    role: "VP PRODUCT, VELOCITI",
+                    name: "MARTGO & POLDIT",
+                    role: "MERN / GRAPHQL PRODUCT WORK",
                     quote:
-                      '"The speed gain was instantaneous. They did not just rebuild our frontend, they redefined our entire delivery process."',
+                      '"Delivered e-commerce dashboard and data-management features with full client satisfaction and strong product ownership."',
                     image:
                       "https://lh3.googleusercontent.com/aida-public/AB6AXuAyUpYqMo8NRjbMaMuVwUZbfk2ZU6JWeC0F-mUaj7vxr2SCckKMgQrzsm2iXOofyalYjuEL2o-ZaWi1mmMljoWoup2s-1CTdKWg4h4Jk2Ocmk3cFVNdMuCTZiAtyT2fVBmwwez6pKVC4SM-lT0ytYJOJ9qHDSBwlNdVQrZP4sPPldUAUjvaKKPtS9KPkARg_q0sqaCL3N8njM7v8AWYBSs3220r57DMbV5zjbYRCAkEY89Q1RCOmUZbY8sVor-AvEpAV1cli1GvInSf",
                   },
@@ -334,12 +337,13 @@ export default function Home() {
         <section className="mx-auto w-full max-w-[1280px] px-8 py-[120px]">
           <div className="relative overflow-hidden rounded-2xl bg-[#c0c1ff] p-16 text-center">
             <h2 className="relative z-10 mb-6 text-5xl font-bold leading-tight text-[#1000a9] md:text-7xl">
-              Build the Future <br />
-              Together.
+              Build your next <br />
+              product with Adeel.
             </h2>
             <p className="relative z-10 mx-auto mb-10 max-w-xl text-lg text-[#1000a9]/80">
-              Ready to scale your digital presence with high-performance
-              frontend engineering? Let us discuss your roadmap.
+              Need a SaaS dashboard, business portal, cloud-backed app, or AI
+              automation workflow? I can turn the scope into a clean,
+              production-ready build.
             </p>
             <div className="relative z-10 flex flex-wrap justify-center gap-6">
               <button className="rounded-full bg-[#0e0e0e] px-10 py-5 text-xs font-semibold uppercase tracking-[0.1em] text-[#e5e2e1] shadow-[0_0_20px_rgba(164,214,76,0.2)] transition-transform duration-300 hover:scale-105">
@@ -356,10 +360,10 @@ export default function Home() {
       <footer className="w-full rounded-t-xl border-t border-white/10 bg-[#0e0e0e]">
         <div className="mx-auto grid w-full max-w-[1280px] grid-cols-12 gap-6 px-8 py-20">
           <div className="col-span-12 lg:col-span-6">
-            <div className="mb-6 text-3xl font-semibold">STUDIO.FE</div>
+            <div className="mb-6 text-3xl font-semibold">Adeel Javed</div>
             <p className="mb-6 max-w-sm text-[#c7c4d7]">
-              Engineered with precision. Delivered with speed. The senior-only
-              frontend collective for high-stakes digital products.
+              Senior full-stack engineer for SaaS dashboards, portals, backend
+              APIs, cloud deployments, real-time features, and AI automation.
             </p>
             <div className="flex gap-4 text-xl text-[#c7c4d7]">
               <span className="cursor-pointer transition-colors hover:text-[#c0c1ff]">
@@ -379,7 +383,7 @@ export default function Home() {
               SITEMAP
             </h4>
             <ul className="space-y-3 text-[#c7c4d7]">
-              {["Case Studies", "Stack", "Availability", "Services"].map(
+              {["Work", "Services", "Stack", "Availability"].map(
                 (item) => (
                   <li key={item}>
                     <a
@@ -399,7 +403,7 @@ export default function Home() {
               LEGAL &amp; CONTACT
             </h4>
             <ul className="space-y-3 text-[#c7c4d7]">
-              {["Privacy", "Terms", "hello@studio-fe.dev"].map((item) => (
+              {["Privacy", "Terms", "adeeljaved839@gmail.com"].map((item) => (
                 <li key={item}>
                   <a
                     className="inline-block transition-all duration-200 hover:translate-x-1 hover:text-[#c0c1ff]"
@@ -414,12 +418,12 @@ export default function Home() {
 
           <div className="col-span-12 mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-center md:flex-row md:text-left">
             <div className="text-sm text-[#c7c4d7]">
-              © 2024 STUDIO.FE — Engineered with Precision.
+              © 2026 Adeel Javed — Full-stack product engineering.
             </div>
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 animate-pulse rounded-full bg-[#a4d64c]" />
               <span className="text-[10px] font-semibold tracking-[0.1em] text-[#c7c4d7]">
-                CURRENT AVAILABILITY: Q3 2024
+                AVAILABLE FOR FREELANCE PROJECTS
               </span>
             </div>
           </div>

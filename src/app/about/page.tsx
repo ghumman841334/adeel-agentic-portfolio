@@ -16,21 +16,21 @@ export default function AboutPage() {
     ["TS", "TypeScript"],
     ["◈", "Tailwind"],
     ["◎", "GraphQL"],
-    ["☁", "Vercel"],
+    ["☁", "AWS / Azure"],
   ];
 
   const principles = [
     {
-      title: "Performance",
-      text: "60fps is the floor, not the ceiling. We engineer for speed, ensuring every interaction feels instantaneous and every payload is optimized to the byte.",
+      title: "Ownership",
+      text: "I can own a feature from UI to API, database, auth, deployment, and maintenance, keeping the work practical and easy for teams to extend.",
     },
     {
-      title: "UX Quality",
-      text: "Design is how it works. We prioritize accessibility, intuitive flow, and microscopic attention to detail to create experiences that delight users.",
+      title: "Business Fit",
+      text: "Every dashboard, portal, and automation should map to the real workflow, reduce manual work, and make the product easier to operate.",
     },
     {
-      title: "Impact",
-      text: "Code must serve a purpose. Every feature we build is designed to drive measurable business outcomes and solve real problems for real people.",
+      title: "Maintainability",
+      text: "I prefer clean architecture, clear API contracts, reliable deployment habits, and readable code over short-term shortcuts.",
     },
   ];
 
@@ -38,26 +38,26 @@ export default function AboutPage() {
     {
       years: "2022 — PRESENT",
       active: true,
-      role: "Founder & Principal Engineer",
-      company: "STUDIO.FE",
+      role: "Software Engineer / Full-Stack Engineer",
+      company: "Cinnova Technologies",
       description:
-        "Leading an elite team of developers to deliver high-performance web applications for global startups and tech giants. Establishing architectural standards and driving technical excellence across all projects.",
+        "Building scalable full-stack applications with React, TypeScript, Node.js, REST and GraphQL APIs, Docker, AWS, and Azure. Led frontend work on RAMPART and delivered real-time communication features for elder care.",
     },
     {
       years: "2019 — 2022",
       active: false,
-      role: "Senior Frontend Engineer",
-      company: "HyperScale Corp",
+      role: "MERN Stack Developer",
+      company: "CBSOL",
       description:
-        "Owned the frontend architecture for the core dashboard product. Implemented a design system used by 50+ engineers and migrated the legacy stack to Next.js, resulting in a 40% improvement in LCP.",
+        "Developed full-stack MERN features, responsive interfaces, GraphQL integrations, e-commerce dashboard work, and data-driven product features for MartGo and POLDIT.",
     },
     {
       years: "2016 — 2019",
       active: false,
-      role: "Frontend Developer",
-      company: "Creative Logic Agency",
+      role: "Web Developer",
+      company: "UF Solutions / Lamprell Engineering",
       description:
-        "Developed high-fidelity marketing sites and interactive prototypes for Fortune 500 clients. Specialized in complex CSS animations and SVG-based visualizations.",
+        "Built web development foundations across client-facing projects before moving deeper into MERN, MEAN, cloud-backed applications, and product engineering.",
     },
   ];
 
@@ -65,7 +65,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-[#131313] text-[#e5e2e1] selection:bg-[#c0c1ff]/30">
       <nav className="fixed top-0 z-50 h-20 w-full border-b border-[#464554]/20 bg-[#131313]/60 backdrop-blur-xl">
         <div className="mx-auto flex h-full w-full max-w-[1280px] items-center justify-between px-8">
-          <div className="text-2xl font-bold tracking-tight">STUDIO.FE</div>
+          <div className="text-2xl font-bold tracking-tight">Adeel Javed</div>
           <div className="hidden items-center gap-12 md:flex">
             {navItems.map((item) => (
               <Link
@@ -78,7 +78,7 @@ export default function AboutPage() {
             ))}
           </div>
           <button className="rounded-lg bg-[#c0c1ff] px-6 py-2 text-xs font-semibold uppercase tracking-[0.1em] text-[#1000a9] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(164,214,76,0.3)] active:scale-95">
-            Start Project
+            Start a Project
           </button>
         </div>
       </nav>
@@ -88,16 +88,16 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-12">
             <div className="z-10 md:col-span-7">
               <span className="mb-6 block text-xs font-semibold uppercase tracking-[0.2em] text-[#a4d64c]">
-                Founder & Lead Engineer
+                Senior Full-Stack Engineer
               </span>
               <h1 className="mb-6 text-5xl font-bold leading-[1.1] tracking-tight md:text-7xl">
-                Engineering the future of digital experiences.
+                Building SaaS dashboards, cloud apps, and AI workflows.
               </h1>
               <p className="mb-12 max-w-xl text-lg leading-relaxed text-[#c7c4d7]">
-                I bridge the gap between high-fidelity design and high-performance
-                engineering. At STUDIO.FE, we do not just build websites; we
-                engineer digital products that set new standards for performance
-                and precision.
+                I am Adeel Javed, a full-stack engineer based in Lahore,
+                Pakistan. I build production-ready web applications, dashboards,
+                APIs, cloud deployments, real-time communication features, and AI
+                automation workflows for teams that need reliable delivery.
               </p>
               <div className="flex flex-wrap gap-6">
                 <button className="rounded-xl bg-[#c0c1ff] px-8 py-4 text-base font-bold text-[#1000a9] transition-transform hover:scale-[1.02] active:scale-[0.98]">
@@ -125,10 +125,10 @@ export default function AboutPage() {
         <section className="mx-auto max-w-[1280px] px-8 py-20">
           <div className="mb-12 text-center">
             <h2 className="mb-1 text-5xl font-semibold tracking-tight">
-              Technical Arsenal
+              Technical Stack
             </h2>
             <p className="text-[#c7c4d7]">
-              Forged with modern, battle-tested technologies.
+              Tools I use to build maintainable full-stack products.
             </p>
           </div>
 
@@ -202,16 +202,16 @@ export default function AboutPage() {
       <footer className="w-full rounded-t-2xl border-t border-[#464554]/20 bg-[#0e0e0e]">
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-6 px-8 py-20 md:grid-cols-12">
           <div className="md:col-span-6">
-            <div className="mb-3 text-3xl font-semibold">STUDIO.FE</div>
+            <div className="mb-3 text-3xl font-semibold">Adeel Javed</div>
             <p className="mb-6 max-w-xs text-[#c7c4d7]">
-              Building the fast, the fluid, and the future.
+              Building practical full-stack products and automation workflows.
             </p>
           </div>
           <div className="flex flex-col gap-4 md:col-span-3">
             <span className="text-xs font-semibold uppercase tracking-[0.18em] opacity-50">
               Navigation
             </span>
-            {["Case Studies", "Stack", "Availability"].map((item) => (
+              {["Work", "Stack", "Availability"].map((item) => (
               <a
                 key={item}
                 href="#"
@@ -237,7 +237,7 @@ export default function AboutPage() {
           </div>
           <div className="mt-12 border-t border-[#464554]/10 pt-12 md:col-span-12">
             <p className="text-[#a4d64c]">
-              © 2024 STUDIO.FE — Engineered with Precision.
+              © 2026 Adeel Javed — Full-stack product engineering.
             </p>
           </div>
         </div>
