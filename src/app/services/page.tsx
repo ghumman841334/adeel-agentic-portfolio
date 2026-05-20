@@ -1,20 +1,27 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
-export default function ServicesPage() {
-  const navItems = [
-    { label: "Work", href: "/work" },
-    { label: "Services", href: "/services", active: true },
-    { label: "Lab", href: "/lab" },
-    { label: "Insights", href: "/insights" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "#" },
-  ];
+import {
+  AnimatedLink,
+  MotionCard,
+  SectionReveal,
+  StaggerContainer,
+} from "@/components/motion-primitives";
+import { SiteNav } from "@/components/site-nav";
 
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "Full-stack services from Adeel Javed for SaaS dashboards, cloud applications, backend APIs, real-time features, and AI automation workflows.",
+};
+
+export default function ServicesPage() {
   const heroCards = [
-    { icon: "◧", title: "SaaS Dashboards", color: "text-[#c0c1ff]" },
-    { icon: "</>", title: "Full-Stack Apps", color: "text-[#a4d64c]" },
-    { icon: "⚡", title: "AI Automation", color: "text-[#c0c1ff]" },
-    { icon: "↗", title: "Cloud Delivery", color: "text-[#a4d64c]" },
+    { icon: "◧", title: "SaaS Dashboards", color: "text-accent-lavender" },
+    { icon: "</>", title: "Full-Stack Apps", color: "text-accent-lime" },
+    { icon: "⚡", title: "AI Automation", color: "text-accent-lavender" },
+    { icon: "↗", title: "Cloud Delivery", color: "text-accent-lime" },
   ];
 
   const processSteps = [
@@ -36,47 +43,25 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#131313] text-[#e5e2e1] selection:bg-[#c0c1ff]/30">
-      <nav className="fixed top-0 z-50 w-full border-b border-[#464554]/20 bg-[#131313]/60 backdrop-blur-xl">
-        <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-8">
-          <div className="text-2xl font-bold tracking-tight">Adeel Javed</div>
-          <div className="hidden items-center gap-8 md:flex">
-            {navItems.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                className={`border-b-2 pb-1 text-xs font-semibold uppercase tracking-[0.1em] transition-colors ${
-                  item.active
-                    ? "border-[#c0c1ff] text-[#c0c1ff]"
-                    : "border-transparent text-[#c7c4d7] hover:text-[#e5e2e1]"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-          <button className="rounded-full bg-[#c0c1ff] px-6 py-2 text-xs font-semibold uppercase tracking-[0.1em] text-[#1000a9] transition-all duration-200 hover:bg-[#c0c1ff]/90 active:scale-95">
-            Start a Project
-          </button>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-site-bg text-site-text selection:bg-accent-lavender/30">
+      <SiteNav />
 
-      <main className="pt-32">
-        <section className="mx-auto mb-20 max-w-[1280px] px-8">
+      <main id="main" className="pt-32">
+        <SectionReveal className="mx-auto mb-20 max-w-[1280px] px-5 sm:px-8">
           <div className="grid grid-cols-1 items-end gap-6 md:grid-cols-12">
             <div className="md:col-span-8">
-              <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.2em] text-[#c0c1ff]">
+              <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.2em] text-accent-lavender">
                 Services for Product Teams
               </span>
               <h1 className="mb-6 text-5xl font-bold leading-[1.1] tracking-tight md:text-7xl">
                 Full-stack delivery for{" "}
-                <span className="bg-gradient-to-r from-[#c0c1ff] to-[#a4d64c] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-accent-lavender to-accent-lime bg-clip-text text-transparent">
                   SaaS, dashboards, and automation.
                 </span>
               </h1>
             </div>
             <div className="pb-4 md:col-span-4">
-              <p className="text-lg text-[#c7c4d7]">
+              <p className="text-lg text-site-muted">
                 I help founders, agencies, and product teams build scalable
                 dashboards, portals, backend APIs, cloud deployments, real-time
                 features, and AI automation workflows.
@@ -84,30 +69,30 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-4">
+          <StaggerContainer className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-4">
             {heroCards.map((card) => (
-              <article
+              <MotionCard
                 key={card.title}
-                className="flex h-48 flex-col justify-between rounded-xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl transition-all duration-300 hover:border-[#c0c1ff]/30 hover:bg-white/[0.05]"
+                className="flex h-48 flex-col justify-between rounded-2xl border border-site-border bg-site-card p-8 backdrop-blur-xl hover:border-accent-lavender/30"
               >
-                <span className={`text-3xl ${card.color}`}>{card.icon}</span>
+                <span className={`text-3xl ${card.color}`} aria-hidden="true">{card.icon}</span>
                 <h3 className="text-2xl font-medium">{card.title}</h3>
-              </article>
+              </MotionCard>
             ))}
-          </div>
-        </section>
+          </StaggerContainer>
+        </SectionReveal>
 
-        <section className="mx-auto max-w-[1280px] px-8 py-20">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
-            <article className="relative min-h-[400px] overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl md:col-span-7">
+        <SectionReveal className="mx-auto max-w-[1280px] px-5 py-20 sm:px-8">
+          <StaggerContainer className="grid grid-cols-1 gap-6 md:grid-cols-12">
+            <MotionCard className="relative min-h-[400px] overflow-hidden rounded-2xl border border-site-border bg-site-card p-8 backdrop-blur-xl md:col-span-7">
               <div className="relative z-10">
-                <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.1em] text-[#c0c1ff]">
+                <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.1em] text-accent-lavender">
                   01 / Product Interfaces
                 </span>
                 <h2 className="mb-6 text-5xl font-semibold tracking-tight">
                   SaaS Dashboards &amp; Portals
                 </h2>
-                <p className="mb-8 max-w-md text-[#c7c4d7]">
+                <p className="mb-8 max-w-md text-site-muted">
                   Responsive, workflow-friendly React, Angular, and Next.js
                   interfaces for admin dashboards, portals, reporting screens,
                   and internal business tools.
@@ -117,7 +102,7 @@ export default function ServicesPage() {
                     (item) => (
                       <span
                         key={item}
-                        className="rounded border border-[#464554]/30 bg-[#201f1f] px-3 py-1 text-[10px] font-semibold tracking-[0.1em]"
+                        className="rounded border border-site-border bg-site-panel px-3 py-1 text-[10px] font-semibold tracking-[0.1em]"
                       >
                         {item}
                       </span>
@@ -125,63 +110,65 @@ export default function ServicesPage() {
                   )}
                 </div>
               </div>
-              <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-[#c0c1ff]/10 blur-[100px]" />
-            </article>
+              <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-accent-lavender/10 blur-[100px]" />
+            </MotionCard>
 
-            <article className="flex flex-col justify-between rounded-xl border border-[#a4d64c]/20 bg-white/[0.03] p-8 backdrop-blur-xl md:col-span-5">
+            <MotionCard className="flex flex-col justify-between rounded-2xl border border-accent-lime/20 bg-site-card p-8 backdrop-blur-xl md:col-span-5">
               <div>
-                <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.1em] text-[#a4d64c]">
+                <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.1em] text-accent-lime">
                   02 / Full-Stack Architecture
                 </span>
                 <h2 className="mb-4 text-3xl font-semibold">Application Engineering</h2>
-                <ul className="space-y-3 text-[#c7c4d7]">
+                <ul className="space-y-3 text-site-muted">
                   {[
                     "React, Angular, Next.js, and TypeScript",
                     "Node.js, Express.js, NestJS, REST, and GraphQL",
                     "JWT, OAuth, RBAC, PostgreSQL, MongoDB, and MySQL",
                   ].map((line) => (
                     <li key={line} className="flex items-center gap-2">
-                      <span className="text-[#a4d64c]">●</span>
+                      <span className="text-accent-lime">●</span>
                       {line}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="mt-8">
-                <img
+                <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCQRJvL4j32ORdb3TTSiC1_uTGLzTlQKpHGbOTqilHkY0iG_OnlWWd94b8BNY5fOib0JSdzJ6HBjVYDfjVOKzIW8-xYI8HbD2TsNQeXC_Gj2b6qYM5FIGwHuRC_-gx5MNNT9fUKg_3UGNR7Pi73zN_my2Zk7oEcUG5Sp6bBrBSojavg9FF7pofqd9cBBZg9sj2Nhtj1RRn4IKv-iiGVllXOjRDFGqpWcyXo_VTbX82cyGvbUcjKGpcIBdZ1rTzcSCguqsHDHuXC_YD"
                   alt="Engineering workspace"
+                  width={560}
+                  height={160}
                   className="h-40 w-full rounded-lg object-cover opacity-50 grayscale transition-all duration-500 hover:grayscale-0"
                 />
               </div>
-            </article>
+            </MotionCard>
 
-            <article className="rounded-xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl md:col-span-4">
-              <span className="mb-4 block text-2xl text-[#c0c1ff]">⚡</span>
+            <MotionCard className="rounded-2xl border border-site-border bg-site-card p-8 backdrop-blur-xl md:col-span-4">
+              <span className="mb-4 block text-2xl text-accent-lavender" aria-hidden="true">⚡</span>
               <h3 className="mb-4 text-2xl font-medium">Cloud &amp; DevOps</h3>
-              <p className="mb-6 text-[#c7c4d7]">
+              <p className="mb-6 text-site-muted">
                 AWS, Azure, Docker, Docker Compose, GitHub Actions, and GitLab
                 CI for releases that are easier to run and maintain.
               </p>
-              <div className="h-1 w-full overflow-hidden rounded-full bg-[#201f1f]">
-                <div className="h-full w-[98%] bg-[#a4d64c]" />
+              <div className="h-1 w-full overflow-hidden rounded-full bg-site-panel">
+                <div className="h-full w-[98%] bg-accent-lime" />
               </div>
-              <div className="mt-2 flex justify-between text-[10px] font-semibold tracking-[0.1em] text-[#a4d64c]">
+              <div className="mt-2 flex justify-between text-[10px] font-semibold tracking-[0.1em] text-accent-lime">
                 <span>DEPLOYMENT READY</span>
                 <span>AWS / AZURE</span>
               </div>
-            </article>
+            </MotionCard>
 
-            <article className="rounded-xl border border-white/10 bg-gradient-to-br from-[#131313] to-[#2a2a2a] p-8 md:col-span-8">
+            <MotionCard className="rounded-2xl border border-site-border bg-gradient-to-br from-site-bg to-site-panel p-8 md:col-span-8">
               <div className="flex h-full flex-col items-center gap-8 md:flex-row">
                 <div className="flex-1">
-                  <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.1em] text-[#c0c1ff]">
+                  <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.1em] text-accent-lavender">
                     03 / Automation
                   </span>
                   <h2 className="mb-4 text-3xl font-semibold">
                     AI Workflows &amp; Calling Agents
                   </h2>
-                  <p className="text-[#c7c4d7]">
+                  <p className="text-site-muted">
                     n8n, Make, and AI agent workflows for lead qualification,
                     appointment booking, CRM updates, support triage, follow-ups,
                     reporting, and human handoff.
@@ -191,48 +178,48 @@ export default function ServicesPage() {
                   {["◔", "▦", "◎"].map((icon) => (
                     <div
                       key={icon}
-                      className="flex aspect-square items-center justify-center rounded-lg border border-[#464554]/10 bg-[#201f1f]"
+                      className="flex aspect-square items-center justify-center rounded-lg border border-site-border bg-site-panel"
                     >
-                      <span className="text-2xl text-[#c7c4d7]">{icon}</span>
+                      <span className="text-2xl text-site-muted" aria-hidden="true">{icon}</span>
                     </div>
                   ))}
-                  <div className="flex aspect-square items-center justify-center rounded-lg bg-[#a4d64c]">
-                    <span className="text-2xl text-[#233600]">↗</span>
+                  <div className="flex aspect-square items-center justify-center rounded-lg bg-accent-lime">
+                    <span className="text-2xl text-accent-lime-foreground" aria-hidden="true">↗</span>
                   </div>
                 </div>
               </div>
-            </article>
-          </div>
-        </section>
+            </MotionCard>
+          </StaggerContainer>
+        </SectionReveal>
 
-        <section className="bg-[#0e0e0e] py-20">
+        <section className="bg-site-section py-20">
           <div className="mx-auto max-w-[1280px] px-8">
             <div className="mb-12 text-center">
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#a4d64c]">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-lime">
                 Workflow
               </span>
               <h2 className="mt-4 text-5xl font-semibold tracking-tight">
                 How I Build
               </h2>
             </div>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <StaggerContainer className="grid grid-cols-1 gap-6 md:grid-cols-3">
               {processSteps.map((step, idx) => (
-                <article
+                <MotionCard
                   key={step.title}
                   className={`border-l p-8 transition-colors ${
                     idx === 1
-                      ? "border-[#464554]/20 hover:border-[#a4d64c]"
-                      : "border-[#464554]/20 hover:border-[#c0c1ff]"
+                      ? "border-site-border hover:border-accent-lime"
+                      : "border-site-border hover:border-accent-lavender"
                   }`}
                 >
-                  <span className="mb-4 block text-3xl text-[#464554]/40">
+                  <span className="mb-4 block text-3xl text-site-muted/40">
                     {step.step}
                   </span>
                   <h3 className="mb-3 text-2xl font-medium">{step.title}</h3>
-                  <p className="text-[#c7c4d7]">{step.text}</p>
-                </article>
+                  <p className="text-site-muted">{step.text}</p>
+                </MotionCard>
               ))}
-            </div>
+            </StaggerContainer>
           </div>
         </section>
 
@@ -242,65 +229,51 @@ export default function ServicesPage() {
           </h2>
           <div className="space-y-4">
             {[
-              "Can you build both frontend and backend?",
-              "Can you automate our CRM or lead workflow?",
-              "Can you work with an existing product team?",
-              "Which technologies do you specialize in?",
-            ].map((question, idx) => (
-              <article
+              ["Can you build both frontend and backend?", "Yes. I can own UI, APIs, auth, database work, integrations, and deployment for focused product scopes."],
+              ["Can you automate our CRM or lead workflow?", "Yes. I can build AI automation workflows with n8n, Make, agents, CRM updates, follow-up logic, reporting, and human approval points."],
+              ["Can you work with an existing product team?", "Yes. I can plug into an existing team, work from tickets or product briefs, and keep delivery visible through clear milestones."],
+              ["Which technologies do you specialize in?", "React, Angular, Next.js, Node.js, TypeScript, REST, GraphQL, PostgreSQL, MongoDB, Docker, AWS, Azure, and AI workflow tooling."],
+            ].map(([question, answer], idx) => (
+              <details
                 key={question}
-                className={`rounded-xl border bg-white/[0.03] p-6 backdrop-blur-xl ${
-                  idx === 1
-                    ? "border-[#c0c1ff]/30"
-                    : "border-white/10 hover:border-[#c0c1ff]/30"
-                }`}
+                open={idx === 1}
+                className="group rounded-2xl border border-site-border bg-site-card p-6 backdrop-blur-xl transition-colors open:border-accent-lavender/30 hover:border-accent-lavender/30"
               >
-                <div className="mb-4 flex cursor-pointer items-center justify-between">
-                  <h4
-                    className={`text-xl font-medium ${
-                      idx === 1 ? "text-[#c0c1ff]" : "text-[#e5e2e1]"
-                    }`}
-                  >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
+                  <span className="text-xl font-medium group-open:text-accent-lavender">
                     {question}
-                  </h4>
-                  <span
-                    className={`text-2xl text-[#c0c1ff] ${
-                      idx === 1 ? "rotate-45" : ""
-                    }`}
-                  >
+                  </span>
+                  <span className="text-2xl text-accent-lavender transition-transform group-open:rotate-45" aria-hidden="true">
                     +
                   </span>
-                </div>
-                {idx === 1 && (
-                  <p className="text-[#c7c4d7]">
-                    Yes. I can build AI automation workflows with n8n, Make, AI
-                    agents, CRM integrations, follow-up logic, reporting, and
-                    clear human approval points where needed.
-                  </p>
-                )}
-              </article>
+                </summary>
+                <p className="mt-4 text-site-muted">{answer}</p>
+              </details>
             ))}
           </div>
         </section>
 
         <section className="mx-auto max-w-[1280px] px-8 py-20">
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-t from-[#c0c1ff]/5 to-transparent p-16 text-center backdrop-blur-xl">
+          <div className="relative overflow-hidden rounded-3xl border border-site-border bg-gradient-to-t from-accent-lavender/5 to-transparent p-16 text-center backdrop-blur-xl">
             <div className="relative z-10">
               <h2 className="mb-6 text-5xl font-bold leading-tight tracking-tight md:text-7xl">
                 Ready to build your <br />
-                <span className="text-[#a4d64c]">next product or workflow?</span>
+                <span className="text-accent-lime">next product or workflow?</span>
               </h2>
-              <p className="mx-auto mb-10 max-w-2xl text-lg text-[#c7c4d7]">
+              <p className="mx-auto mb-10 max-w-2xl text-lg text-site-muted">
                 Share your product goal, current stack, or manual process. I can
                 review the scope and suggest the cleanest implementation path.
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                <button className="rounded-full bg-[#a4d64c] px-8 py-4 text-xs font-semibold uppercase tracking-[0.1em] text-[#233600] shadow-[0_0_20px_rgba(164,214,76,0.15)] transition-all hover:-translate-y-0.5">
+                <AnimatedLink
+                  href="/#contact"
+                  className="bg-accent-lime px-8 py-4 text-accent-lime-foreground hover:bg-accent-lime/90"
+                >
                   Book Discovery Call
-                </button>
-                <button className="rounded-full border border-[#464554] px-8 py-4 text-xs font-semibold uppercase tracking-[0.1em] transition-colors hover:bg-[#3a3939]">
+                </AnimatedLink>
+                <AnimatedLink href="/work" variant="secondary" className="px-8 py-4">
                   View Work
-                </button>
+                </AnimatedLink>
               </div>
             </div>
             <div className="pointer-events-none absolute inset-0 opacity-10 [background-image:radial-gradient(circle_at_2px_2px,#fff_1px,transparent_0)] [background-size:40px_40px]" />
@@ -308,72 +281,79 @@ export default function ServicesPage() {
         </section>
       </main>
 
-      <footer className="w-full rounded-t-xl border-t border-[#464554]/20 bg-[#0e0e0e]">
+      <footer className="w-full rounded-t-xl border-t border-site-border bg-site-section">
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-6 px-8 py-20 md:grid-cols-12">
           <div className="md:col-span-4">
             <div className="mb-4 text-3xl font-semibold">Adeel Javed</div>
-            <p className="max-w-xs text-[#c7c4d7]">
+            <p className="max-w-xs text-site-muted">
               Senior full-stack engineer for SaaS dashboards, portals, cloud
               systems, real-time features, and AI automation.
             </p>
           </div>
           <div className="md:col-span-2">
-            <h5 className="mb-6 text-xs font-semibold uppercase tracking-[0.1em] text-[#a4d64c]">
+            <h5 className="mb-6 text-xs font-semibold uppercase tracking-[0.1em] text-accent-lime">
               Services
             </h5>
-            <ul className="space-y-3 text-[#c7c4d7]">
-              {["SaaS Apps", "APIs", "Automation"].map((item) => (
+            <ul className="space-y-3 text-site-muted">
+              {[
+                ["SaaS Apps", "/services"],
+                ["APIs", "/services"],
+                ["Automation", "/services"],
+              ].map(([item, href]) => (
                 <li key={item}>
-                  <a
-                    href="#"
-                    className="inline-block transition-all duration-200 hover:translate-x-1 hover:text-[#c0c1ff]"
+                  <Link
+                    href={href}
+                    className="inline-block transition-all duration-200 hover:translate-x-1 hover:text-accent-lavender"
                   >
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
           <div className="md:col-span-2">
-            <h5 className="mb-6 text-xs font-semibold uppercase tracking-[0.1em] text-[#a4d64c]">
+            <h5 className="mb-6 text-xs font-semibold uppercase tracking-[0.1em] text-accent-lime">
               Portfolio
             </h5>
-            <ul className="space-y-3 text-[#c7c4d7]">
-              {["Work", "Stack", "Availability"].map((item) => (
+            <ul className="space-y-3 text-site-muted">
+              {[
+                ["Work", "/work"],
+                ["Stack", "/about"],
+                ["Availability", "/#contact"],
+              ].map(([item, href]) => (
                 <li key={item}>
-                  <a
-                    href="#"
-                    className="inline-block transition-all duration-200 hover:translate-x-1 hover:text-[#c0c1ff]"
+                  <Link
+                    href={href}
+                    className="inline-block transition-all duration-200 hover:translate-x-1 hover:text-accent-lavender"
                   >
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
           <div className="md:col-span-4">
-            <h5 className="mb-6 text-xs font-semibold uppercase tracking-[0.1em] text-[#a4d64c]">
+            <h5 className="mb-6 text-xs font-semibold uppercase tracking-[0.1em] text-accent-lime">
               Contact
             </h5>
-            <div className="flex border-b border-[#464554] pb-2">
+            <div className="flex border-b border-site-border pb-2">
               <input
                 type="email"
                 placeholder="adeeljaved839@gmail.com"
-                className="w-full border-none bg-transparent text-[#e5e2e1] outline-none placeholder:text-[#c7c4d7]"
+                className="w-full border-none bg-transparent text-site-text outline-none placeholder:text-site-muted"
               />
-              <button className="text-[#c0c1ff]">→</button>
+              <a className="text-accent-lavender" href="mailto:adeeljaved839@gmail.com" aria-label="Email Adeel">
+                →
+              </a>
             </div>
           </div>
-          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#464554]/20 pt-8 md:col-span-12 md:flex-row">
-            <p className="text-[#c7c4d7]">
+          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-site-border pt-8 md:col-span-12 md:flex-row">
+            <p className="text-site-muted">
               © 2026 Adeel Javed — Production-ready software delivery.
             </p>
-            <div className="flex gap-6 text-[#c7c4d7]">
-              <a href="#" className="transition-colors hover:text-[#c0c1ff]">
-                Privacy
-              </a>
-              <a href="#" className="transition-colors hover:text-[#c0c1ff]">
-                Terms
+            <div className="flex gap-6 text-site-muted">
+              <a href="mailto:adeeljaved839@gmail.com" className="transition-colors hover:text-accent-lavender">
+                Contact
               </a>
             </div>
           </div>
